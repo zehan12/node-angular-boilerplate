@@ -5,8 +5,8 @@
         "node": ">=16 <19"
     },
     "scripts": {
-        "start": "cd backend && npm install && nodemon server.js",
-        "prebuild": "cd frontend && npm install && ng build",
-        "build": "cd frontend && npm install && ng build"
+        "start": "cd backend && nodemon server.js",
+        "prebuild": "cd frontend && npm install --force && ng build && cd .. && cd backend && npm install",
+        "build": "cd frontend && npm install --force && ng build && cd .. && cd backend && npm install"
     }
 }
