@@ -1,0 +1,7 @@
+<div class="container {{searchPageEnable?'':'search-container'}}">
+    <div class="{{searchPageEnable?'search-page-box':'search-box'}}">
+        <input class="" [(ngModel)]="searchItem" type="text" placeholder="Search your favorite food"
+            (change)="search()">
+        <button (click)="search()">Search</button>
+    </div>
+</div>

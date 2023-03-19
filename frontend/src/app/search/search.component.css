@@ -1,0 +1,42 @@
+.search-container {
+    background-image: url("https://travelcare.vercel.app/assets/search-bg.475cab22.webp");
+    background-size: cover;
+    height: 40vh;
+    width: 100%;
+}
+
+.search-page-box {
+    background-color: red;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem;
+}
+
+.search-box input {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    border-radius: 10rem 0 0 10rem;
+    border: none;
+    padding: 1.2rem;
+    height: 3rem;
+    width: 20rem;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+}
+
+.search-box button {
+    color: white;
+    height: 3rem;
+    width: 8rem;
+    border: none;
+    border-radius: 0 10rem 10rem 0;
+    background-color: crimson;
+}
+
+.search-box button:hover {
+    background-color: darkred;
+}

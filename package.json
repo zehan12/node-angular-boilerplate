@@ -1,0 +1,12 @@
+{
+    "name": "Food-Order-App",
+    "version": "1.0.0",
+    "engines": {
+        "node": ">=16 <19"
+    },
+    "scripts": {
+        "start": "cd backend && npm install && nodemon server.js",
+        "prebuild": "cd frontend && npm install && ng build",
+        "build": "cd frontend && npm install && ng build"
+    }
+}

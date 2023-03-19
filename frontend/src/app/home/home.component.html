@@ -1,0 +1,54 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<div *ngIf="!foods.length" class="container">
+    <app-result-not-found></app-result-not-found>
+</div>
+<ul>
+    <li *ngFor="let food of foods">
+        <a routerLink="/food/{{food.id}}">
+            <img class="food-image" src={{food.imageUrl}} alt="food">
+            <div class="content">
+                <div class="name">
+                    {{food.name}}
+                </div>
+                <span class="favorite {{food.favorite?'':'not'}}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                </span>
+                <star-rating [value]="food.star" [totalstars]="5" checkedcolor="#FEC107" uncheckedcolor="#E2E8EA" size="22px"
+                    [readonly]="true">
+                </star-rating>
+                <div class="product-item-footer">
+                    <div class="origins">
+                        <span *ngFor="let origin of food.origins">
+                            {{origin.toUpperCase()}}
+                        </span>
+                    </div>
+
+                    <div class="cook-time">
+                        <span>🕒</span>
+                        {{food.cookTime + " mins"}}
+                    </div>
+                </div>
+
+                <div class="price">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="20"
+                        width="20" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path
+                                d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.5-8v2H11v2h2v-2h1a2.5 2.5 0 1 0 0-5h-4a.5.5 0 1 1 0-1h5.5V8H13V6h-2v2h-1a2.5 2.5 0 0 0 0 5h4a.5.5 0 1 1 0 1H8.5z">
+                            </path>
+                        </g>
+                    </svg>
+                    <span>
+                        {{food.price}}
+                    </span>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>

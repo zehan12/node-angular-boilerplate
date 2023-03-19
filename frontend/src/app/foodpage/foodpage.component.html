@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="food-container">
+        <div *ngIf="food.id" class="zoom img-hover-zoom">
+            <img [src]="food.imageUrl" [alt]="food.name" />
+        </div>
+        <div class="details">
+            <div class="header">
+                <span class="name">
+                    {{food.name}}
+                </span>
+                <span class="favorite {{food.favorite ? '' : 'not'}}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                </span>
+            </div>
+            <div>
+                <star-rating [value]="food.star" [totalstars]="5" checkedcolor="#FEC107" uncheckedcolor="#E2E8EA"
+                    size="22px" [readonly]="true">
+                </star-rating>
+                <div class="product-item-footer">
+                    <div class="origins">
+                        <span *ngFor="let origin of food.origins">
+                            {{origin.toUpperCase()}}
+                        </span>
+                    </div>
+                    <app-tags [foodPageTags]="food.tags"></app-tags>
+
+                    <div class="cook-time">
+                        <span>
+                            Time to cook about <strong>{{food.cookTime}}</strong> Minutes
+                        </span>
+                    </div>
+
+                    <div class="price">
+                        <span>
+                            {{food.price|currency}}
+                        </span>
+                    </div>
+                </div>
+
+                <button (click)="addToCart()" class="btn">Add to Cart</button>
+
+            </div>
+        </div>
+    </div>
+</div>

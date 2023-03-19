@@ -1,0 +1,126 @@
+.food-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 3rem;
+    margin-top: 0;
+}
+
+.food-container>* {
+    min-width: 25rem;
+    max-width: 40rem;
+}
+
+/* .zoom { */
+/* padding: 50px; */
+/* transition: transform .2s; */
+/* Animation */
+/* width: 200px; */
+/* height: 200px; */
+/* margin: 0 auto; */
+/* } */
+
+/* .zoom:hover { */
+/* height: 10rem; */
+/* transform: scale(1.5); */
+/* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+/* } */
+
+img {
+    height: 20rem;
+    width: 100%;
+    border-radius: 3rem;
+    flex: 1 0;
+    object-fit: contain;
+}
+
+/* Point-zoom Container */
+.img-hover-zoom--point-zoom img {
+    transform-origin: 65% 75%;
+    transition: transform 1s, filter .5s ease-out;
+}
+
+/* The Transformation */
+.img-hover-zoom--point-zoom:hover img {
+    transform: scale(5);
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
+    border-radius: 3rem;
+    padding: 2rem;
+    color: black;
+    margin-left: 1rem;
+}
+
+.details .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details .name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.details .favorite {
+    color: crimson;
+    font-size: 2.5rem;
+}
+
+.details .favorite .not {
+    color: ghostwhite;
+}
+
+.details .origins {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.details .origins > span {
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    margin: .5rem;
+    border-radius: 2rem;
+    background-color: beige;
+    color: black;
+}
+
+.details .cook-time {
+    margin: 1rem;
+}
+
+.details .cook-time span {
+    padding: .6rem 2rem .6rem 0;
+    border-radius: 10rem;
+    font-size: 1.3rem;
+}
+
+.details .price {
+    font-size: 1.8rem;
+    margin: 2rem 2rem 2rem 0;
+    color:green;
+}
+
+.details .price::before {
+    content: "Price: ";
+    color: black;
+}
+
+.btn {
+    width: 100%;
+    background-color: crimson;
+    color: white;
+    margin: .9rem 0;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: #4EAD59;
+}

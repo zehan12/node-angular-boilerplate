@@ -1,0 +1,43 @@
+.breadcrumb {
+    background: none;
+    font-size: .8rem;
+    padding: 1rem 0;
+
+}
+
+a,
+span {
+    color: #8C8C8C;
+    font-weight: 100;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+a:hover,
+span:hover {
+    color: crimson;
+    text-decoration: none;
+}
+
+
+li {
+    list-style: none;
+    float: left;
+    margin: 5px;
+}
+
+
+
+li::after {
+    content: "/";
+    color: #8C8C8C;
+}
+
+li:last-child::after {
+    content: "";
+}
+
+li:last-child span {
+    margin-right: 20px;
+    color: #D5D5D5;
+}

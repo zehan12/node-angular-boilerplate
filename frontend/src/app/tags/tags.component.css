@@ -1,0 +1,43 @@
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem auto ;
+}
+
+.tag {
+    border: 1px solid white;
+    border-radius: 10rem;
+    background-color:azure;
+    font-size: .9rem;
+    padding: .3rem 1rem;
+    margin: .1rem .15rem;
+    font-weight: 400;
+}
+
+.tag:hover {
+    /* border: 1px solid #0D6EFD; */
+    color: #EAA56A;
+}
+
+
+.food-tag {
+    margin-top: -1.9rem;
+    margin-bottom: .8rem;
+}
+
+.tags {
+    border: 1px solid white;
+    border-radius: 10rem;
+    background-color:azure;
+    font-size: .7rem; 
+    padding: .3rem 1rem;
+    margin: .1rem .15rem;
+    top: 3rem;
+    font-weight: 400;
+}
+
+.tags:hover {
+    background-color: green;
+    color: white;
+}

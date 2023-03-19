@@ -1,0 +1,17 @@
+.container svg {
+    text-align: center;
+}
+
+.svg-contain {
+    text-align: center;
+}
+
+.svg-contain svg {
+    fill: black;
+    height: 5rem;
+}
+
+.svg-contain h5 {
+    font-size: 2rem;
+    color: gray;
+}
