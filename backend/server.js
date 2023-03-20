@@ -15,7 +15,7 @@ app.use(cors({
 app.use(express.static('../frontend/dist/foodorder'));
 
 app.get("*",(req,res)=>{
-    res.sendFile(path.join(""))
+    res.sendFile(path.join(appPath))
 })
 
 
